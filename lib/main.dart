@@ -1,4 +1,4 @@
-import 'package:shecare/diary.dart';
+import 'package:shecare/db/model/data_model_1.dart';
 import 'package:shecare/fitness.dart';
 import 'package:shecare/journal.dart';
 import 'package:shecare/period.dart';
@@ -6,7 +6,6 @@ import 'package:shecare/toDoList.dart';
 import 'package:shecare/signup.dart';
 import 'package:shecare/login.dart';
 import 'package:shecare/calendar.dart';
-import 'package:shecare/diary.dart';
 import 'package:shecare/home.dart';
 import 'package:shecare/mydial.dart';
 import 'package:flutter/material.dart';
@@ -19,6 +18,9 @@ Future<void> main() async {
   await Hive.initFlutter();
   if(!Hive.isAdapterRegistered(FileDataAdapter().typeId)){
     Hive.registerAdapter(FileDataAdapter());
+  }
+  if(!Hive.isAdapterRegistered(FileData1Adapter().typeId)){
+    Hive.registerAdapter(FileData1Adapter());
   }
   runApp(const MyApp());
 }
