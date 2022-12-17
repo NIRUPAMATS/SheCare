@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:ammuna/home.dart';
+import 'package:SheCare/home.dart';
 
 //import 'package:url_launcher/url_launcher.dart';
 
