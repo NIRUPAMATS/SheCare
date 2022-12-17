@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
-import 'package:ammuna/account.dart';
-import 'package:ammuna/home.dart';
-import 'package:ammuna/db/functions/login_functions.dart';
-import 'package:ammuna/db/model/data_model_account.dart';
+import 'package:SheCare/account.dart';
+import 'package:SheCare/home.dart';
+import 'package:SheCare/db/functions/login_functions.dart';
+import 'package:SheCare/db/model/data_model_account.dart';
 
 class SignIn extends StatefulWidget {
   const SignIn({Key? key}) : super(key: key);

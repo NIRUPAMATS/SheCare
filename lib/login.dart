@@ -1,6 +1,6 @@
-import 'package:ammuna/signup.dart';
+import 'package:SheCare/signup.dart';
 import 'package:flutter/material.dart';
-import 'package:ammuna/db/functions/login_functions.dart';
+import 'package:SheCare/db/functions/login_functions.dart';
 
 import 'home.dart';
 
