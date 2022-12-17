@@ -1,19 +1,19 @@
-import 'package:shecare/fitness.dart';
+import 'package:SheCare/fitness.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:shecare/diary.dart';
-import 'package:shecare/period.dart';
-import 'package:shecare/toDoList.dart';
-import 'package:shecare/signup.dart';
-import 'package:shecare/login.dart';
-import 'package:shecare/calendar.dart';
-import 'package:shecare/diary.dart';
-import 'package:shecare/home.dart';
-import 'package:shecare/mydial.dart';
-import 'package:shecare/journal.dart';
+import 'package:SheCare/diary.dart';
+import 'package:SheCare/period.dart';
+import 'package:SheCare/toDoList.dart';
+import 'package:SheCare/signup.dart';
+import 'package:SheCare/login.dart';
+import 'package:SheCare/calendar.dart';
+import 'package:SheCare/diary.dart';
+import 'package:SheCare/home.dart';
+import 'package:SheCare/mydial.dart';
+import 'package:SheCare/journal.dart';
 import 'package:hive/hive.dart';
 import 'package:url_launcher/url_launcher.dart';
-import 'package:shecare/journal.dart';
+import 'package:SheCare/journal.dart';
 
 
 class Home extends StatelessWidget {
