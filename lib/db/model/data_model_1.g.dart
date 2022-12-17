@@ -1,41 +1,41 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'data_model_diary.dart';
+part of 'data_model_1.dart';
 
 // **************************************************************************
 // TypeAdapterGenerator
 // **************************************************************************
 
-class FileDatadiaryAdapter extends TypeAdapter<FileData_diary> {
+class FileData1Adapter extends TypeAdapter<FileData1> {
   @override
-  final int typeId = 1;
+  final int typeId = 2;
 
   @override
-  FileData_diary read(BinaryReader reader) {
+  FileData1 read(BinaryReader reader) {
     final numOfFields = reader.readByte();
     final fields = <int, dynamic>{
       for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
     };
-    return FileData_diary(
-      title: fields[1] as String,
-      data: fields[2] as String,
-      dateTime: fields[3] as String,
-      id: fields[0] as int?,
+    return FileData1(
+      filename1: fields[1] as String?,
+      filedata1: fields[2] as String?,
+      date1: fields[3] as String?,
+      id1: fields[0] as int?,
     );
   }
 
   @override
-  void write(BinaryWriter writer, FileData_diary obj) {
+  void write(BinaryWriter writer, FileData1 obj) {
     writer
       ..writeByte(4)
       ..writeByte(0)
-      ..write(obj.id)
+      ..write(obj.id1)
       ..writeByte(1)
-      ..write(obj.title)
+      ..write(obj.filename1)
       ..writeByte(2)
-      ..write(obj.data)
+      ..write(obj.filedata1)
       ..writeByte(3)
-      ..write(obj.dateTime);
+      ..write(obj.date1);
   }
 
   @override
@@ -44,7 +44,7 @@ class FileDatadiaryAdapter extends TypeAdapter<FileData_diary> {
   @override
   bool operator ==(Object other) =>
       identical(this, other) ||
-      other is FileDatadiaryAdapter &&
+      other is FileData1Adapter &&
           runtimeType == other.runtimeType &&
           typeId == other.typeId;
 }

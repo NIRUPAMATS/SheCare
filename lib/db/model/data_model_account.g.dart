@@ -65,7 +65,7 @@ class AccountAdapter extends TypeAdapter<Account> {
   @override
   bool operator ==(Object other) =>
       identical(this, other) ||
-          other is AccountAdapter &&
-              runtimeType == other.runtimeType &&
-              typeId == other.typeId;
+      other is AccountAdapter &&
+          runtimeType == other.runtimeType &&
+          typeId == other.typeId;
 }
