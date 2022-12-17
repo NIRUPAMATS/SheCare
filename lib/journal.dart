@@ -1,11 +1,11 @@
-import 'package:ammuna/db/model/data_model_diary.dart';
-import 'package:ammuna/diary.dart';
+import 'package:SheCare/db/model/data_model_diary.dart';
+import 'package:SheCare/diary.dart';
 import 'package:flutter/material.dart';
 import 'package:hive_flutter/adapters.dart';
-import 'package:ammuna/db/functions/db_functions_diary.dart';
-import 'package:ammuna/db/model/data_model_diary.dart';
+import 'package:SheCare/db/functions/db_functions_diary.dart';
+import 'package:SheCare/db/model/data_model_diary.dart';
 import 'package:intl/intl.dart';
-import 'package:ammuna/home.dart';
+import 'package:SheCare/home.dart';
 
 
 

@@ -1,9 +1,9 @@
-import 'package:ammuna/journal.dart';
+import 'package:SheCare/journal.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
-import 'package:ammuna/db/functions/db_functions_diary.dart';
-import 'package:ammuna/db/model/data_model_diary.dart';
+import 'package:SheCare/db/functions/db_functions_diary.dart';
+import 'package:SheCare/db/model/data_model_diary.dart';
 
 
 String title1 = "";
