@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:SheCare/home.dart';
+import 'package:shecare/home.dart';
 
 
 class Fitness extends StatelessWidget {

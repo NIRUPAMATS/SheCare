@@ -1,8 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:ammuna/db/model/data_model_account.dart';
+import 'package:shecare/db/model/data_model_account.dart';
 import 'package:hive_flutter/adapters.dart';
-import 'package:ammuna/account.dart';
+import 'package:shecare/account.dart';
 List<Account> accounts = <Account>[];
 Future<void> addAccount(Account value) async{
   final accountdb=await Hive.openBox<Account>('accountdb');

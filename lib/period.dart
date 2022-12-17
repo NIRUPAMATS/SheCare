@@ -1,7 +1,7 @@
-import 'package:ammuna/calendar.dart';
+import 'package:shecare/calendar.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:SheCare/home.dart';
+import 'package:shecare/home.dart';
 
 
 class Period extends StatelessWidget {

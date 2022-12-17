@@ -1,11 +1,11 @@
-import 'package:SheCare/db/model/data_model_diary.dart';
-import 'package:SheCare/diary.dart';
+import 'package:shecare/db/model/data_model_diary.dart';
+import 'package:shecare/diary.dart';
 import 'package:flutter/material.dart';
 import 'package:hive_flutter/adapters.dart';
-import 'package:SheCare/db/functions/db_functions_diary.dart';
-import 'package:SheCare/db/model/data_model_diary.dart';
+import 'package:shecare/db/functions/db_functions_diary.dart';
+import 'package:shecare/db/model/data_model_diary.dart';
 import 'package:intl/intl.dart';
-import 'package:SheCare/home.dart';
+import 'package:shecare/home.dart';
 
 
 

@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:hive_flutter/adapters.dart';
-import 'package:SheCare/db/model/data_model.dart';
+import 'package:shecare/db/model/data_model.dart';
 
 ValueNotifier<List<FileData>> filelistnotifier=ValueNotifier([]);
 Future<void> addFiles(FileData value) async{

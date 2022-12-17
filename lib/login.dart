@@ -1,6 +1,6 @@
-import 'package:SheCare/signup.dart';
+import 'package:shecare/signup.dart';
 import 'package:flutter/material.dart';
-import 'package:SheCare/db/functions/login_functions.dart';
+import 'package:shecare/db/functions/login_functions.dart';
 
 import 'home.dart';
 
