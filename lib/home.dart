@@ -199,16 +199,65 @@ class Home extends StatelessWidget {
                     child: Card(
                       child: Padding(
                         padding: const EdgeInsets.all(30.0),
-                        child: Text(
-                          "A Self-started, Motivated, Dynamic. I design and develop web applications."
-                              "A Self-started, Motivated, Dynamic. I design and develop web applications."
-                              "A Self-started, Motivated, Dynamic. I design and develop web applications."
-                              "A Self-started, Motivated, Dynamic. I design and develop web applications.",
-                          style : TextStyle(
-                            color: Colors.black,
-                            fontSize: 18.0,
-                            fontWeight: FontWeight.bold,
-                          ),
+                        child: Column(
+                          children: [
+                            Text(
+                              'SheCare For You!',
+                              style : TextStyle(
+                                color: Colors.black,
+                                fontSize: 20.0,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                            SizedBox(height:10),
+                            Card(
+                              child: Text('Journal',
+                                style : TextStyle(
+                                  color: Colors.black,
+                                  fontSize: 18.0,
+                                  fontWeight: FontWeight.w500,
+                                ),
+                              ),
+                            ),
+                            Card(
+
+                              child: Text('Period Tracker',
+                                style : TextStyle(
+                                  color: Colors.black,
+                                  fontSize: 18.0,
+                                  fontWeight: FontWeight.w500,
+                                ),
+                              ),
+                            ),
+                            Card(
+                              child: Text('Fitness Guide',
+                                style : TextStyle(
+                                  color: Colors.black,
+                                  fontSize: 18.0,
+                                  fontWeight: FontWeight.w500,
+                                ),
+                              ),
+                            ),
+                            Card(
+                              child: Text('Task Manager',
+                                style : TextStyle(
+                                  color: Colors.black,
+                                  fontSize: 18.0,
+                                  fontWeight: FontWeight.w500,
+                                ),
+                              ),
+                            ),
+                            Card(
+                              child: Text('Emergency Contacts',
+                                style : TextStyle(
+                                  color: Colors.black,
+                                  fontSize: 18.0,
+                                  fontWeight: FontWeight.w500,
+                                ),
+                              ),
+                            ),
+
+                          ],
                         ),
                       ),
                       color: Colors.white,

@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:shecare/db/functions/db_functions_1.dart';
 import 'package:shecare/db/model/data_model_1.dart';
 import 'package:intl/intl.dart';
+import 'package:shecare/home.dart';
 
   String? currentDate1 =  DateFormat('dd-MM-yyyy').format(DateTime.now());
   String? name = "";
@@ -37,7 +38,7 @@ class _JournalState extends State<Journal> {
           IconButton(
             icon: const Icon(Icons.home),
             onPressed: () {
-              //Navigator.of(context).push(MaterialPageRoute(builder: (context)=>Home()));
+              Navigator.of(context).push(MaterialPageRoute(builder: (context)=>Home()));
             },
           ),
         ],
@@ -46,7 +47,7 @@ class _JournalState extends State<Journal> {
           child:ValueListenableBuilder(
           valueListenable: filelistnotifier,
           builder:(BuildContext context, List<FileData1>filelist, Widget? child) {
-        return Container(
+             return Container(
           decoration: BoxDecoration(
             gradient: LinearGradient(
               begin: Alignment.topCenter,
@@ -57,9 +58,9 @@ class _JournalState extends State<Journal> {
               ],
             ),
           ),
-          child: Column(
-            children: [
-              Container(
+              child: Column(
+                children: [
+                Container(
                 margin: EdgeInsets.only(top: 20,bottom: 30),
                 child: Text("Hey there\nWhat's on your mind?!",
                   style: TextStyle(
@@ -71,8 +72,8 @@ class _JournalState extends State<Journal> {
                   ),
                 ),
               ),
-              Expanded(child:
-              ListView.separated(itemBuilder: (BuildContext context,int index){
+                Expanded(
+                  child: ListView.separated(itemBuilder: (BuildContext context,int index){
             return Card(
               color: Colors.white,
               child:
@@ -84,7 +85,7 @@ class _JournalState extends State<Journal> {
                         margin:EdgeInsets.only(right: MediaQuery.of(context).size.width/3 ,bottom: 5),
                         child: Text(filelist[index].date1.toString(),
                         style: TextStyle(
-                          fontSize: 17,
+                          fontSize: 15,
                           fontWeight: FontWeight.w300,
                         ),
                         )
@@ -108,7 +109,8 @@ class _JournalState extends State<Journal> {
             );
           },
           separatorBuilder: (BuildContext context, int index) => const Divider(),
-          itemCount: filelist.length),),
+          itemCount: filelist.length),
+                ),
             ],
           ),
         );
@@ -120,11 +122,11 @@ class _JournalState extends State<Journal> {
         onPressed: () {
           showDialog(context: context, builder: (context) {
             return Dialog(
-      child: Padding(
+              child: Padding(
           padding: EdgeInsets.all(15),
-              child: Column(
-            children: [
-              Row(
+                child: Column(
+                  children: [
+                  Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Text(currentDate1.toString(),
