@@ -14,11 +14,16 @@ import 'package:hive_flutter/hive_flutter.dart';
 import 'package:shecare/db/functions/db_functions.dart';
 import 'package:shecare/db/model/data_model.dart';
 
+import 'db/model/data_model_account.dart';
+
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Hive.initFlutter();
   if(!Hive.isAdapterRegistered(FileDataAdapter().typeId)){
     Hive.registerAdapter(FileDataAdapter());
+  }
+  if(!Hive.isAdapterRegistered(AccountAdapter().typeId)){
+    Hive.registerAdapter(AccountAdapter());
   }
   runApp(const MyApp());
 }
@@ -31,7 +36,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
         debugShowCheckedModeBanner: false,
         theme: ThemeData(primaryColor: Colors.blueAccent),
-        home: Home()
+        home: Login()
     );
   }
 }
+

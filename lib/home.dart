@@ -1,12 +1,12 @@
+import 'package:shecare/db/functions/login_functions.dart';
+import 'package:shecare/db/model/data_model_account.dart';
 import 'package:shecare/fitness.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:shecare/diary.dart';
 import 'package:shecare/period.dart';
 import 'package:shecare/toDoList.dart';
 import 'package:shecare/signup.dart';
 import 'package:shecare/login.dart';
-import 'package:shecare/calendar.dart';
 import 'package:shecare/diary.dart';
 import 'package:shecare/home.dart';
 import 'package:shecare/mydial.dart';
@@ -15,10 +15,19 @@ import 'package:hive/hive.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:shecare/journal.dart';
 
+import 'db/model/data_model_account.dart';
 
-class Home extends StatelessWidget {
+
+class Home extends StatefulWidget {
 
 
+  @override
+  State<Home> createState() => _HomeState();
+}
+
+String mail="";
+
+class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -74,14 +83,9 @@ class Home extends StatelessWidget {
               ),
               title: const Text('My Profile'),
               onTap: () {
-                Navigator.pushReplacement(
-                    context,
-                    MaterialPageRoute(
-                        builder: (BuildContext context){
-                          return MyDial();
-                        }
-                    )
-                );
+                //mail = getEmail().toString();
+                //loadPage(mail, context);
+                //Navigator.of(context).push(MaterialPageRoute(builder: (context)=>account()));
               },
             ),
             ListTile(

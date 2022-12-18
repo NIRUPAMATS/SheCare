@@ -1,15 +1,9 @@
-import 'package:shecare/signup.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/src/foundation/key.dart';
+import 'package:flutter/src/widgets/framework.dart';
+import 'package:shecare/account.dart';
 import 'package:shecare/db/functions/login_functions.dart';
-
-import 'home.dart';
-
-
-final mailinputcontroller=TextEditingController();
-final passwordinputcontroller=TextEditingController();
-final namecontroller=TextEditingController();
-
-String _email="",_password='',_repassword='';
+import 'package:shecare/signup.dart';
 
 class Login extends StatefulWidget {
   const Login({Key? key}) : super(key: key);
@@ -28,8 +22,10 @@ class _LoginState extends State<Login> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Color(0xffff5e6b),
-      body: Padding(padding:
-      const EdgeInsets.all(25),
+      body: Container(
+        padding: EdgeInsets.only(left:20,right: 20,),
+        height: MediaQuery.of(context).size.height,
+        width: MediaQuery.of(context).size.width,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
@@ -40,7 +36,7 @@ class _LoginState extends State<Login> {
             ),
             ),
             Container(
-              margin: EdgeInsets.only(top:10.0,bottom: 70.0),
+              margin: EdgeInsets.only(top:10.0,bottom: 40.0),
               child: Text('Log In',
                 style:TextStyle(
                   fontSize:35.0,
@@ -48,66 +44,59 @@ class _LoginState extends State<Login> {
                   color: Colors.white,
                 ),),
             ),
-
             TextFormField(
-              controller: mailinputcontroller,
+              controller: mailcontroller,
               decoration: const InputDecoration(
-                  hintText: 'Email',
+                  hintText: 'email',
                   hintStyle: TextStyle(color: Colors.white),
-                  border: InputBorder.none,
-                  enabledBorder: OutlineInputBorder(
+                  border: OutlineInputBorder(
                       borderRadius: BorderRadius.all(Radius.circular(4.0)),
-                      borderSide: BorderSide(
-                        color:Colors.white,
-                      )
-                  )
-              ),
+                      borderSide: BorderSide(color: Colors.green, style : BorderStyle.solid,))),
             ),
 
-            const SizedBox(height:10),
+            const SizedBox(height: 10),
             TextFormField(
-              controller: passwordinputcontroller,
+              obscureText: true,
+              controller: passwordcontroller,
               decoration: const InputDecoration(
                   hintText: 'Password',
                   hintStyle: TextStyle(color: Colors.white),
-                  border: InputBorder.none,
-                  enabledBorder: OutlineInputBorder(
+                  border: OutlineInputBorder(
                       borderRadius: BorderRadius.all(Radius.circular(4.0)),
-                      borderSide: BorderSide(
-                        color:Colors.white,
-                      )
-                  )
-              ),
+                      borderSide: BorderSide())),
             ),
+
             SizedBox(height: MediaQuery.of(context).size.height/50,),
             ElevatedButton(
-              style: ButtonStyle(backgroundColor: MaterialStateProperty.all(Colors.white)),
+                style: ButtonStyle(backgroundColor: MaterialStateProperty.all(Colors.white)),
                 onPressed: () async {
-                lemail=mailcontroller.text;
-                lpassword=passwordcontroller.text;
-                if(await checkPassword(lemail, lpassword)==0){
-                  showDialog(context: context, builder: (context){
-                    return const Dialog(child:Text('Invalid credentials',style: TextStyle(color: Colors.red),),
-                  );
-                }
-              );
-              mailcontroller.clear();
-              passwordcontroller.clear();
-              }
-              else{
-                loadPage(lemail, context);
-              }
-              },
-                child: Text(
-                  'Login',
-                  style:TextStyle(
+                  lemail=mailcontroller.text;
+                  lpassword=passwordcontroller.text;
+                  if(await checkPassword(lemail, lpassword)==0){
+                    showDialog(context: context, builder: (context){
+                      return const Dialog(child:Padding(
+                        padding: EdgeInsets.all(20.0),
+                        child: Text('Invalid credentials',style: TextStyle(color: Colors.red),),
+                      ),
+                      );
+                    });
+                    mailcontroller.clear();
+                    passwordcontroller.clear();
+                  }
+                  else{
+                    //storeEmail(lemail);
+                    loadPage(lemail, context);
+                  }
+                },
+                child:const Text(
+                  "Login",
+                style:TextStyle(
                   color: Colors.pinkAccent ,
                   fontSize: 15.0,
                   letterSpacing: 1.0,
                   ),
-                ),
-            ),
-            const SizedBox(height: 10),
+                )),
+            const SizedBox(height: 30),
             Row(
               children: [
                 const Text("Don't have an account?"),
@@ -116,10 +105,14 @@ class _LoginState extends State<Login> {
                       MaterialPageRoute(builder: (ctx)=>SignIn())
                   );
                 },
-                    child: const Text("Sign In",
-                    style: TextStyle(
-                      color: Colors.white,
-                    ),))
+                    child: const Text(
+                      "Sign In",
+                      style:TextStyle(
+                        color: Colors.white ,
+                        fontSize: 15.0,
+                        letterSpacing: 1.0,
+                      ),
+                ))
               ],
             )
           ],
