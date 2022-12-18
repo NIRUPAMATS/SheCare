@@ -75,76 +75,77 @@ class _SignInState extends State<SignIn> {
                 ElevatedButton(
                     style: ButtonStyle(backgroundColor: MaterialStateProperty.all(Colors.white)),
                     onPressed: () async {
-                      _email=mailinputcontroller.text;
-                      _password=passwordinputcontroller.text;
-                      _repassword=repasswordinputcontroller.text;
-                      if(_password!=_repassword){
-                        showDialog(context: context, builder: (context){
-                          return  Dialog(
-                              child: Container(child: Padding(
-                                padding: EdgeInsets.all(8.0),
-                                child: Text('reEnter the password correcty!!',style: TextStyle(color: Colors.red)),
-                              ),height: 45,)
-                          );
-                        });
-                        repasswordinputcontroller.clear();
-                      }
-                      else{
-                        if(await searchAccount(_email)==1){
-                          showDialog(context: context, builder: (context){
-                            return  Dialog(
-                                child: Container(child: Padding(
-                                  padding: const EdgeInsets.all(8.0),
-                                  child: Text('Email already signed in!!',style: TextStyle(color: Colors.red),),
-                                ),height: 45,)
-                            );
-                          });
-                          mailinputcontroller.clear();
-                          repasswordinputcontroller.clear();
-                          passwordinputcontroller.clear();
-                        }
-                        else{
-                          final newacc=Account(email: _email, password: _password);
-                          addAccount(newacc);
-                          showDialog(context: context, builder: (context){
-                            return  Dialog(
-                                child:
-                                Container(
-                                  height: MediaQuery.of(context).size.height/3,
-                                  child: Center(
-                                    child: Column(
-                                        mainAxisAlignment: MainAxisAlignment.center,
-                                        children:[
-                                          const Text('Successfully Signed in!!',style: TextStyle(color: Colors.red)),
-                                          const SizedBox(height: 10),
-                                          Padding(padding: const EdgeInsets.all(30),
-                                            child: TextField(
-                                              controller: namecontroller,
-                                              decoration:const InputDecoration(hintText: 'Enter Name',
-                                                  border: OutlineInputBorder(
-                                                      borderRadius: BorderRadius.all(Radius.circular(4.0)),
-                                                      borderSide: BorderSide())
-                                              ),
-                                            ),
-                                          ),
-                                          const SizedBox(height: 20,),
-                                          ElevatedButton(
-                                              style: ButtonStyle(backgroundColor: MaterialStateProperty.all(Colors.pink)),
-                                              onPressed:() async {
-                                                //await addDetails(_email, 1, namecontroller.text);
-                                                //storeEmail(_email);
-                                                //loadPage(_email, context);
-                                                Navigator.of(context).push(MaterialPageRoute(builder: (context)=>Home()));
-                                              }, child: const Text('OK',
-                                          style: TextStyle(color: Colors.white),))
-                                        ]
-                                    ) ,
-                                  ),
-                                )
-                            );
-                          });
-                        }
-                      }
+                      Navigator.of(context).push(MaterialPageRoute(builder: (context)=>Home()));
+                      // _email=mailinputcontroller.text;
+                      // _password=passwordinputcontroller.text;
+                      // _repassword=repasswordinputcontroller.text;
+                      // if(_password!=_repassword){
+                      //   showDialog(context: context, builder: (context){
+                      //     return  Dialog(
+                      //         child: Container(child: Padding(
+                      //           padding: EdgeInsets.all(8.0),
+                      //           child: Text('reEnter the password correcty!!',style: TextStyle(color: Colors.red)),
+                      //         ),height: 45,)
+                      //     );
+                      //   });
+                      //   repasswordinputcontroller.clear();
+                      // }
+                      // else{
+                      //   if(await searchAccount(_email)==1){
+                      //     showDialog(context: context, builder: (context){
+                      //       return  Dialog(
+                      //           child: Container(child: Padding(
+                      //             padding: const EdgeInsets.all(8.0),
+                      //             child: Text('Email already signed in!!',style: TextStyle(color: Colors.red),),
+                      //           ),height: 45,)
+                      //       );
+                      //     });
+                      //     mailinputcontroller.clear();
+                      //     repasswordinputcontroller.clear();
+                      //     passwordinputcontroller.clear();
+                      //   }
+                      //   else{
+                      //     final newacc=Account(email: _email, password: _password);
+                      //     addAccount(newacc);
+                      //     showDialog(context: context, builder: (context){
+                      //       return  Dialog(
+                      //           child:
+                      //           Container(
+                      //             height: MediaQuery.of(context).size.height/3,
+                      //             child: Center(
+                      //               child: Column(
+                      //                   mainAxisAlignment: MainAxisAlignment.center,
+                      //                   children:[
+                      //                     const Text('Successfully Signed in!!',style: TextStyle(color: Colors.red)),
+                      //                     const SizedBox(height: 10),
+                      //                     Padding(padding: const EdgeInsets.all(30),
+                      //                       child: TextField(
+                      //                         controller: namecontroller,
+                      //                         decoration:const InputDecoration(hintText: 'Enter Name',
+                      //                             border: OutlineInputBorder(
+                      //                                 borderRadius: BorderRadius.all(Radius.circular(4.0)),
+                      //                                 borderSide: BorderSide())
+                      //                         ),
+                      //                       ),
+                      //                     ),
+                      //                     const SizedBox(height: 20,),
+                      //                     ElevatedButton(
+                      //                         style: ButtonStyle(backgroundColor: MaterialStateProperty.all(Colors.pink)),
+                      //                         onPressed:() async {
+                      //                           //await addDetails(_email, 1, namecontroller.text);
+                      //                           //storeEmail(_email);
+                      //                           //loadPage(_email, context);
+                      //                           Navigator.of(context).push(MaterialPageRoute(builder: (context)=>Home()));
+                      //                         }, child: const Text('OK',
+                      //                     style: TextStyle(color: Colors.white),))
+                      //                   ]
+                      //               ) ,
+                      //             ),
+                      //           )
+                      //       );
+                      //     });
+                      //   }
+                      // }
                     },
                     child:const Text(
                       "Sign In",
