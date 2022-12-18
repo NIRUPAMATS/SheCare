@@ -7,10 +7,21 @@ Click <a href="https://drive.google.com/file/d/1C5wX3Qs6Nv9sVo9A_csdcdum8eQ9mz40
 
 An Integrated Self-Tracking System for women : <br/>
 - Journaling
+  Journal helps us to simply write down your thoughts and feelings to understand them more clearly.
+  
 - Period Tracking
+  Your ultimate menstruation guide.
+  Will let you know your next period and fertile date.
+
 - Fitness guide
+  You can see all our tips and advise for a fit and healthy life.
+
 - Task Management
+  Do not let you miss any of your deadlines and let you complete your task on time.
+
 - Emergency contact list 
+  Provides all helpline numbers during emergency situations.
+
 
 ## Stacks/ Technologies used
 
@@ -23,7 +34,7 @@ Just install the apk in your Mobile phone
 
 ## Bugs /Errors
 Errors/Bugs
-Couldn't show period details on calendar
+Couldn't show period details on calendar,but displayed on a card below
 Couldn't login or signup (Type cast error)
 Couldn't display profile page (Type cast error)
 couldn't enable call function 
