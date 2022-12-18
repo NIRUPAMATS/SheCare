@@ -7,13 +7,16 @@ import 'package:shecare/period.dart';
 import 'package:shecare/toDoList.dart';
 import 'package:shecare/signup.dart';
 import 'package:shecare/login.dart';
+<<<<<<< HEAD
 import 'package:shecare/diary.dart';
+=======
+import 'package:shecare/calendar.dart';
+>>>>>>> 8e183cb3d8003bae65053d1a753f81c76bf92fb8
 import 'package:shecare/home.dart';
 import 'package:shecare/mydial.dart';
 import 'package:shecare/journal.dart';
 import 'package:hive/hive.dart';
 import 'package:url_launcher/url_launcher.dart';
-import 'package:shecare/journal.dart';
 
 import 'db/model/data_model_account.dart';
 
@@ -206,16 +209,65 @@ class _HomeState extends State<Home> {
                     child: Card(
                       child: Padding(
                         padding: const EdgeInsets.all(30.0),
-                        child: Text(
-                          "A Self-started, Motivated, Dynamic. I design and develop web applications."
-                              "A Self-started, Motivated, Dynamic. I design and develop web applications."
-                              "A Self-started, Motivated, Dynamic. I design and develop web applications."
-                              "A Self-started, Motivated, Dynamic. I design and develop web applications.",
-                          style : TextStyle(
-                            color: Colors.black,
-                            fontSize: 18.0,
-                            fontWeight: FontWeight.bold,
-                          ),
+                        child: Column(
+                          children: [
+                            Text(
+                              'SheCare For You!',
+                              style : TextStyle(
+                                color: Colors.black,
+                                fontSize: 20.0,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                            SizedBox(height:10),
+                            Card(
+                              child: Text('Journal',
+                                style : TextStyle(
+                                  color: Colors.black,
+                                  fontSize: 18.0,
+                                  fontWeight: FontWeight.w500,
+                                ),
+                              ),
+                            ),
+                            Card(
+
+                              child: Text('Period Tracker',
+                                style : TextStyle(
+                                  color: Colors.black,
+                                  fontSize: 18.0,
+                                  fontWeight: FontWeight.w500,
+                                ),
+                              ),
+                            ),
+                            Card(
+                              child: Text('Fitness Guide',
+                                style : TextStyle(
+                                  color: Colors.black,
+                                  fontSize: 18.0,
+                                  fontWeight: FontWeight.w500,
+                                ),
+                              ),
+                            ),
+                            Card(
+                              child: Text('Task Manager',
+                                style : TextStyle(
+                                  color: Colors.black,
+                                  fontSize: 18.0,
+                                  fontWeight: FontWeight.w500,
+                                ),
+                              ),
+                            ),
+                            Card(
+                              child: Text('Emergency Contacts',
+                                style : TextStyle(
+                                  color: Colors.black,
+                                  fontSize: 18.0,
+                                  fontWeight: FontWeight.w500,
+                                ),
+                              ),
+                            ),
+
+                          ],
                         ),
                       ),
                       color: Colors.white,

@@ -22,6 +22,7 @@ version: 1.0.0+1
 environment:
   sdk: '>=2.15.1 <3.0.0'
 
+
 # Dependencies specify other packages that your package needs in order to work.
 # To automatically upgrade your package dependencies to the latest versions
 # consider running `flutter pub upgrade --major-versions`. Alternatively,
@@ -73,6 +74,8 @@ flutter:
     - assets/emblem.jpeg
     - assets/snehapic.jpg
     - assets/pinkbg1.jpg
+    - assets/logo.jpg
+    - assets/pinkbg.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

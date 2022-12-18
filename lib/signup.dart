@@ -160,6 +160,11 @@ class _SignInState extends State<SignIn> {
   }
 }
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 8e183cb3d8003bae65053d1a753f81c76bf92fb8
 // import 'package:flutter/material.dart';
 // import 'package:ammuna/db/functions/login_functions.dart';
 // import 'package:ammuna/home.dart';

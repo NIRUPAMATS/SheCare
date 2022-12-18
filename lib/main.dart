@@ -1,4 +1,4 @@
-import 'package:shecare/diary.dart';
+import 'package:shecare/db/model/data_model_1.dart';
 import 'package:shecare/fitness.dart';
 import 'package:shecare/journal.dart';
 import 'package:shecare/period.dart';
@@ -6,13 +6,15 @@ import 'package:shecare/toDoList.dart';
 import 'package:shecare/signup.dart';
 import 'package:shecare/login.dart';
 import 'package:shecare/calendar.dart';
-import 'package:shecare/diary.dart';
 import 'package:shecare/home.dart';
 import 'package:shecare/mydial.dart';
 import 'package:flutter/material.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:shecare/db/functions/db_functions.dart';
 import 'package:shecare/db/model/data_model.dart';
+import 'package:shecare/splash_screen.dart';
+
+import 'db/model/data_model_4.dart';
 
 import 'db/model/data_model_account.dart';
 
@@ -22,9 +24,20 @@ Future<void> main() async {
   if(!Hive.isAdapterRegistered(FileDataAdapter().typeId)){
     Hive.registerAdapter(FileDataAdapter());
   }
+<<<<<<< HEAD
   if(!Hive.isAdapterRegistered(AccountAdapter().typeId)){
     Hive.registerAdapter(AccountAdapter());
   }
+=======
+  if(!Hive.isAdapterRegistered(FileData1Adapter().typeId)){
+    Hive.registerAdapter(FileData1Adapter());
+  }
+
+  if(!Hive.isAdapterRegistered(FileData4Adapter().typeId)){
+    Hive.registerAdapter(FileData4Adapter());
+  }
+
+>>>>>>> 8e183cb3d8003bae65053d1a753f81c76bf92fb8
   runApp(const MyApp());
 }
 class MyApp extends StatelessWidget {
@@ -36,7 +49,15 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
         debugShowCheckedModeBanner: false,
         theme: ThemeData(primaryColor: Colors.blueAccent),
+<<<<<<< HEAD
         home: Login()
+=======
+<<<<<<< Updated upstream
+        home: Calendar()
+=======
+        home: Home()
+>>>>>>> Stashed changes
+>>>>>>> 8e183cb3d8003bae65053d1a753f81c76bf92fb8
     );
   }
 }

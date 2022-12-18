@@ -117,7 +117,7 @@ class _toDoListState extends State<toDoList> {
             return Dialog(
 
                 child: Container(
-                  height: MediaQuery.of(context).size.height/3,
+                  height: MediaQuery.of(context).size.height/2,
                   child: Padding(
                       padding: EdgeInsets.all(15),
                       child: Column(
