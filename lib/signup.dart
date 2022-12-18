@@ -160,10 +160,7 @@ class _SignInState extends State<SignIn> {
         ));
   }
 }
-<<<<<<< Updated upstream
-=======
 
->>>>>>> Stashed changes
 // import 'package:flutter/material.dart';
 // import 'package:ammuna/db/functions/login_functions.dart';
 // import 'package:ammuna/home.dart';

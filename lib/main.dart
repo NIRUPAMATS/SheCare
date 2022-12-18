@@ -24,7 +24,6 @@ Future<void> main() async {
   if(!Hive.isAdapterRegistered(FileDataAdapter().typeId)){
     Hive.registerAdapter(FileDataAdapter());
   }
-<<<<<<< Updated upstream
 
 
   if(!Hive.isAdapterRegistered(AccountAdapter().typeId)){
@@ -34,11 +33,9 @@ Future<void> main() async {
     Hive.registerAdapter(AccountAdapter());
   }
 
-=======
   if(!Hive.isAdapterRegistered(AccountAdapter().typeId)){
     Hive.registerAdapter(AccountAdapter());
   }
->>>>>>> Stashed changes
   if(!Hive.isAdapterRegistered(FileData1Adapter().typeId)){
     Hive.registerAdapter(FileData1Adapter());
   }
@@ -47,10 +44,7 @@ Future<void> main() async {
     Hive.registerAdapter(FileData4Adapter());
   }
 
-<<<<<<< Updated upstream
 
-=======
->>>>>>> Stashed changes
   runApp(const MyApp());
 }
 class MyApp extends StatelessWidget {
@@ -62,15 +56,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
         debugShowCheckedModeBanner: false,
         theme: ThemeData(primaryColor: Colors.blueAccent),
-<<<<<<< Updated upstream
-<<<<<<< HEAD
-=======
 
->>>>>>> 20e0d6bf63ffdfb75379a1b68cf9451f51244437
-        home: Home()
-=======
         home: SplashScreen()
->>>>>>> Stashed changes
     );
   }
 }
