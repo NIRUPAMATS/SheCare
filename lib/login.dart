@@ -3,6 +3,7 @@ import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:shecare/account.dart';
 import 'package:shecare/db/functions/login_functions.dart';
+import 'package:shecare/home.dart';
 import 'package:shecare/signup.dart';
 
 class Login extends StatefulWidget {
@@ -69,25 +70,28 @@ class _LoginState extends State<Login> {
             SizedBox(height: MediaQuery.of(context).size.height/50,),
             ElevatedButton(
                 style: ButtonStyle(backgroundColor: MaterialStateProperty.all(Colors.white)),
-                onPressed: () async {
-                  lemail=mailcontroller.text;
-                  lpassword=passwordcontroller.text;
-                  if(await checkPassword(lemail, lpassword)==0){
-                    showDialog(context: context, builder: (context){
-                      return const Dialog(child:Padding(
-                        padding: EdgeInsets.all(20.0),
-                        child: Text('Invalid credentials',style: TextStyle(color: Colors.red),),
-                      ),
-                      );
-                    });
-                    mailcontroller.clear();
-                    passwordcontroller.clear();
-                  }
-                  else{
-                    //storeEmail(lemail);
-                    loadPage(lemail, context);
-                  }
-                },
+                 onPressed: () async {
+                  Navigator.of(context).push(MaterialPageRoute(builder: (context)=>Home()));
+
+                //   lemail=mailcontroller.text;
+                //   lpassword=passwordcontroller.text;
+                //   if(await checkPassword(lemail, lpassword)==0){
+                //     showDialog(context: context, builder: (context){
+                //       return const Dialog(child:Padding(
+                //         padding: EdgeInsets.all(20.0),
+                //         child: Text('Invalid credentials',style: TextStyle(color: Colors.red),),
+                //       ),
+                //       );
+                //     });
+                //     mailcontroller.clear();
+                //     passwordcontroller.clear();
+                //   }
+                //   else{
+                //     //storeEmail(lemail);
+                //     //loadPage(lemail, context);
+                //     Navigator.of(context).push(MaterialPageRoute(builder: (context)=>Home()));
+                //   }
+                 },
                 child:const Text(
                   "Login",
                 style:TextStyle(

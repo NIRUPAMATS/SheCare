@@ -131,9 +131,10 @@ class _SignInState extends State<SignIn> {
                                           ElevatedButton(
                                               style: ButtonStyle(backgroundColor: MaterialStateProperty.all(Colors.pink)),
                                               onPressed:() async {
-                                                await addDetails(_email, 1, namecontroller.text);
+                                                //await addDetails(_email, 1, namecontroller.text);
                                                 //storeEmail(_email);
-                                                loadPage(_email, context);
+                                                //loadPage(_email, context);
+                                                Navigator.of(context).push(MaterialPageRoute(builder: (context)=>Home()));
                                               }, child: const Text('OK',
                                           style: TextStyle(color: Colors.white),))
                                         ]
@@ -159,6 +160,10 @@ class _SignInState extends State<SignIn> {
         ));
   }
 }
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
 // import 'package:flutter/material.dart';
 // import 'package:ammuna/db/functions/login_functions.dart';
 // import 'package:ammuna/home.dart';
