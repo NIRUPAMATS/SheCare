@@ -198,16 +198,27 @@ class Home extends StatelessWidget {
                     width: MediaQuery.of(context).size.width,
                     child: Card(
                       child: Padding(
-                        padding: const EdgeInsets.all(30.0),
-                        child: Text(
-                          "A Self-started, Motivated, Dynamic. I design and develop web applications."
-                              "A Self-started, Motivated, Dynamic. I design and develop web applications."
-                              "A Self-started, Motivated, Dynamic. I design and develop web applications."
-                              "A Self-started, Motivated, Dynamic. I design and develop web applications.",
-                          style : TextStyle(
-                            color: Colors.black,
-                            fontSize: 18.0,
-                            fontWeight: FontWeight.bold,
+                        padding: const EdgeInsets.only(top: 70),
+                        child: Center(
+                          child: Column(
+                            children: [
+                              Text(
+                                'SheCare For You!',
+                                style: TextStyle(
+                                  fontSize: 25,
+                                ),
+                              ),
+                              Center(
+                                child: Text(
+                                  'Journal\nPeriod Tracker\nFitness Guide\nTask Manager\nEmergency Contacts',
+                                  style : TextStyle(
+                                    color: Colors.black,
+                                    fontSize: 18.0,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                              ),
+                            ],
                           ),
                         ),
                       ),
