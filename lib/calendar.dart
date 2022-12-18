@@ -165,7 +165,7 @@ class _CalendarState extends State<Calendar> {
                     //   ),
                     TextField(
                       controller: namecontroller,
-                      decoration:const InputDecoration(hintText: 'Enter last period date',
+                      decoration:const InputDecoration(hintText: 'Enter last period date: yyyymmdd',
                           border: OutlineInputBorder(
                               borderRadius: BorderRadius.all(Radius.circular(4.0)),
                               borderSide: BorderSide())
@@ -174,7 +174,7 @@ class _CalendarState extends State<Calendar> {
                     const SizedBox(height: 10,),
                     TextField(
                       controller: lengthcontroller,
-                      decoration:const InputDecoration(hintText: 'Enter period length',
+                      decoration:const InputDecoration(hintText: 'Enter cycle length',
                           border: OutlineInputBorder(
                               borderRadius: BorderRadius.all(Radius.circular(4.0)),
                               borderSide: BorderSide())
@@ -201,8 +201,8 @@ class _CalendarState extends State<Calendar> {
                             children: [
                               Text(
                                   'Next Periods on '+pd+'\nNext Fertile Date '+f,
+
                                 style: TextStyle(
-                                  fontWeight: FontWeight.bold,
                                   fontSize: 22,
                                 ),
                               ),
