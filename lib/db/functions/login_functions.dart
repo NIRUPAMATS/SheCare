@@ -1,9 +1,15 @@
+import 'dart:async';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:shecare/db/model/data_model_account.dart';
 import 'package:hive_flutter/adapters.dart';
 import 'package:shecare/account.dart';
-List<Account> accounts = <Account>[];
+
+List <Account> accounts = <Account>[];
+//List <String> accountdb = <String>[];
+//String mail="";
+
 Future<void> addAccount(Account value) async{
   final accountdb=await Hive.openBox<Account>('accountdb');
   final _id=await accountdb.add(value);
@@ -11,23 +17,18 @@ Future<void> addAccount(Account value) async{
   accountdb.put(_id, value);
   accounts.add(value);
 }
-Future<void> getAllAccounts() async{
-  final accountdb=await Hive.openBox<Account>('accountdb');
+Future<void> getAllAccounts() async {
+  var accountdb= await Hive.openBox<Account>('accountdb');
+  //print(accountdb);
   accounts.clear();
   accounts.addAll(accountdb.values);
 }
-Future<void>clear_notes()async{
+
+Future<int> searchAccount(String value1) async {
   await getAllAccounts();
   for(int i=0;i<accounts.length;i++){
-    accounts[i].notes.clear();
-    accounts[i].drank=0;
-  }
-}
-Future<int> searchAccount(String value) async {
-  await getAllAccounts();
-  for(int i=0;i<accounts.length;i++){
-    if(accounts[i].email==value){
-      return 1;
+    if(accounts[i].email==value1){
+        return 1;
     }
   }
   return 0;
@@ -59,11 +60,9 @@ Future<void> addDetails(String email,int type,String value)async{
         break;
         case 5:accounts[i].bloodgroup=value;
         break;
-        case 6:accounts[i].address=value;
+        case 6:accounts[i].lastperiod=value;
         break;
-        case 7:accounts[i].notes.add(value);
-        break;
-        case 8:accounts[i].drank=int.parse(value);
+        case 7:accounts[i].periodlength=value;
         break;
       }
       accountdb.put(accounts[i].id, accounts[i]);
@@ -78,3 +77,9 @@ Future<void>loadPage(String email,BuildContext ctx) async{
     }
   }
 }
+// Future<void>storeEmail(String email) async{
+//   mail= email;
+//}
+// Future<String>getEmail() async{
+//   return mail;
+// }

@@ -8,7 +8,7 @@ part of 'data_model_account.dart';
 
 class AccountAdapter extends TypeAdapter<Account> {
   @override
-  final int typeId = 1;
+  final int typeId = 3;
 
   @override
   Account read(BinaryReader reader) {
@@ -26,15 +26,14 @@ class AccountAdapter extends TypeAdapter<Account> {
       ..height = fields[5] as String
       ..weight = fields[6] as String
       ..bloodgroup = fields[7] as String
-      ..address = fields[8] as String
-      ..notes = (fields[9] as List).cast<String>()
-      ..drank = fields[10] as int;
+      ..lastperiod = fields[8] as String
+      ..periodlength = fields[9] as String;
   }
 
   @override
   void write(BinaryWriter writer, Account obj) {
     writer
-      ..writeByte(11)
+      ..writeByte(10)
       ..writeByte(0)
       ..write(obj.id)
       ..writeByte(1)
@@ -52,11 +51,9 @@ class AccountAdapter extends TypeAdapter<Account> {
       ..writeByte(7)
       ..write(obj.bloodgroup)
       ..writeByte(8)
-      ..write(obj.address)
+      ..write(obj.lastperiod)
       ..writeByte(9)
-      ..write(obj.notes)
-      ..writeByte(10)
-      ..write(obj.drank);
+      ..write(obj.periodlength);
   }
 
   @override
