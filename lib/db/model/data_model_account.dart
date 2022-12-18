@@ -1,6 +1,6 @@
 import 'package:hive/hive.dart';
 part 'data_model_account.g.dart';
-@HiveType(typeId:1)
+@HiveType(typeId:3)
 class Account{
   @HiveField(0)
   int? id;
@@ -19,10 +19,8 @@ class Account{
   @HiveField(7)
   String bloodgroup="";
   @HiveField(8)
-  String address="";
+  String lastperiod="";
   @HiveField(9)
-  List<String>notes=<String>[];
-  @HiveField(10)
-  int drank=0;
+  String periodlength="";
   Account({required this.email,required this.password,this.id});
 }
