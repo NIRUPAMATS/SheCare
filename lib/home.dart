@@ -1,3 +1,4 @@
+import 'package:shecare/account.dart';
 import 'package:shecare/db/functions/login_functions.dart';
 import 'package:shecare/db/model/data_model_account.dart';
 import 'package:shecare/fitness.dart';
@@ -84,7 +85,7 @@ class _HomeState extends State<Home> {
               onTap: () {
                 //mail = getEmail().toString();
                 //loadPage(mail, context);
-                //Navigator.of(context).push(MaterialPageRoute(builder: (context)=>account()));
+                Navigator.of(context).push(MaterialPageRoute(builder: (context)=>account()));
               },
             ),
             ListTile(

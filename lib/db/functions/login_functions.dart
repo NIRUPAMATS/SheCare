@@ -73,7 +73,7 @@ Future<void>loadPage(String email,BuildContext ctx) async{
   await getAllAccounts();
   for(int i=0;i<accounts.length;i++){
     if(accounts[i].email==email){
-      Navigator.of(ctx).push(MaterialPageRoute(builder: ((context) => account(newaccount: accounts[i]))));
+      //Navigator.of(ctx).push(MaterialPageRoute(builder: ((context) => account(newaccount: accounts[i]))));
     }
   }
 }

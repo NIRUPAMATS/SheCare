@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shecare/home.dart';
 // import 'package:shecare/home.dart';
 
 
@@ -22,7 +23,7 @@ class Fitness extends StatelessWidget {
           IconButton(
             icon: const Icon(Icons.home),
             onPressed: () {
-              // Navigator.of(context).push(MaterialPageRoute(builder: (context)=>Home()));
+              Navigator.of(context).push(MaterialPageRoute(builder: (context)=>Home()));
             },
           ),
         ],

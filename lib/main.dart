@@ -33,6 +33,9 @@ Future<void> main() async {
     Hive.registerAdapter(AccountAdapter());
   }
 
+  if(!Hive.isAdapterRegistered(AccountAdapter().typeId)){
+    Hive.registerAdapter(AccountAdapter());
+  }
   if(!Hive.isAdapterRegistered(FileData1Adapter().typeId)){
     Hive.registerAdapter(FileData1Adapter());
   }
@@ -53,11 +56,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
         debugShowCheckedModeBanner: false,
         theme: ThemeData(primaryColor: Colors.blueAccent),
-<<<<<<< HEAD
-=======
 
->>>>>>> 20e0d6bf63ffdfb75379a1b68cf9451f51244437
-        home: Home()
+        home: SplashScreen()
     );
   }
 }

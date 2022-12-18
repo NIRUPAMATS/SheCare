@@ -136,8 +136,9 @@ import 'package:shecare/home.dart';
 //
 
 class account extends StatefulWidget {
-  final Account newaccount;
-  const account({Key? key, required this.newaccount}) : super(key: key);
+  // final Account newaccount;
+  const account({Key? key}) : super(key: key);
+  //, required this.newaccount
 
   @override
   State<account> createState() => _accountState();
@@ -198,10 +199,10 @@ class _accountState extends State<account> {
                           'Name: ',
                           style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
                         ),
-                        Text(
-                          widget.newaccount.name.toString(),
-                          style: const TextStyle(color: Colors.black87,fontSize: 20),
-                        ),
+                        // Text(
+                        //   widget.newaccount.name.toString(),
+                        //   style: const TextStyle(color: Colors.black87,fontSize: 20),
+                        // ),
                       ],
                     ),
                     trailing: IconButton(
@@ -220,10 +221,10 @@ class _accountState extends State<account> {
                           'Age: ',
                           style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
                         ),
-                        Text(
-                          widget.newaccount.age.toString(),
-                          style: const TextStyle(color: Color.fromARGB(255, 66, 64, 64),fontSize: 20),
-                        ),
+                        // Text(
+                        //   widget.newaccount.age.toString(),
+                        //   style: const TextStyle(color: Color.fromARGB(255, 66, 64, 64),fontSize: 20),
+                        // ),
                       ],
                     ),
                     trailing: IconButton(
@@ -242,10 +243,10 @@ class _accountState extends State<account> {
                           'Height: ',
                           style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
                         ),
-                        Text(
-                          widget.newaccount.height.toString(),
-                          style: const TextStyle(color: Color.fromARGB(255, 66, 64, 64),fontSize: 20),
-                        ),
+                        // Text(
+                        //   widget.newaccount.height.toString(),
+                        //   style: const TextStyle(color: Color.fromARGB(255, 66, 64, 64),fontSize: 20),
+                        // ),
                       ],
                     ),
                     trailing: IconButton(
@@ -264,10 +265,10 @@ class _accountState extends State<account> {
                           'Weight: ',
                           style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
                         ),
-                        Text(
-                          widget.newaccount.weight.toString(),
-                          style: const TextStyle(color: Color.fromARGB(255, 66, 64, 64),fontSize: 20),
-                        ),
+                        // Text(
+                        //   widget.newaccount.weight.toString(),
+                        //   style: const TextStyle(color: Color.fromARGB(255, 66, 64, 64),fontSize: 20),
+                        // ),
                       ],
                     ),
                     trailing: IconButton(
@@ -286,10 +287,10 @@ class _accountState extends State<account> {
                           'Blood Group: ',
                           style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
                         ),
-                        Text(
-                          widget.newaccount.bloodgroup.toString(),
-                          style: const TextStyle(color: Color.fromARGB(255, 66, 64, 64),fontSize: 20),
-                        ),
+                        // Text(
+                        //   widget.newaccount.bloodgroup.toString(),
+                        //   style: const TextStyle(color: Color.fromARGB(255, 66, 64, 64),fontSize: 20),
+                        // ),
                       ],
                     ),
                     trailing: IconButton(
@@ -308,10 +309,10 @@ class _accountState extends State<account> {
                           'Last Period Date: ',
                           style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
                         ),
-                        Text(
-                          widget.newaccount.lastperiod.toString(),
-                          style: const TextStyle(color: Color.fromARGB(255, 66, 64, 64),fontSize: 20),
-                        ),
+                        // Text(
+                        //   widget.newaccount.lastperiod.toString(),
+                        //   style: const TextStyle(color: Color.fromARGB(255, 66, 64, 64),fontSize: 20),
+                        // ),
                       ],
                     ),
                     trailing: IconButton(
@@ -330,10 +331,10 @@ class _accountState extends State<account> {
                           'Period Length: ',
                           style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
                         ),
-                        Text(
-                          widget.newaccount.periodlength.toString(),
-                          style: const TextStyle(color: Color.fromARGB(255, 66, 64, 64),fontSize: 20),
-                        ),
+                        // Text(
+                        //   widget.newaccount.periodlength.toString(),
+                        //   style: const TextStyle(color: Color.fromARGB(255, 66, 64, 64),fontSize: 20),
+                        // ),
                       ],
                     ),
                     trailing: IconButton(
@@ -380,7 +381,7 @@ class _accountState extends State<account> {
                         onPressed: () async {
                           result = editingcontroller.text;
                           setState(() {
-                            addDetails(widget.newaccount.email.toString(), index, result);
+                            //addDetails(widget.newaccount.email.toString(), index, result);
                           });
                           editingcontroller.clear();
                           Navigator.of(context).pop();
